@@ -1,0 +1,138 @@
+body {
+    background-color: hsl(210, 46%, 95%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+* {
+    box-sizing: border-box; /*makes a element with border go within its container */
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    width: 21px;
+    height: 21px;
+}
+
+
+#container {
+    /*border: 2px solid black;*/
+    margin: 10px auto;
+    max-width: 355px;
+    min-width: 200px;
+}
+
+.flex-wrapper, .horizontal-flex-wrapper {
+    display: flex;
+}
+
+.flex-wrapper
+{
+    flex-direction: column;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+#card-1 {
+    /*border: 2px solid red;*/
+    background-image: url("./images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left 85%;  /* text+number = from where+how far */
+}
+
+/*#card-2 {*/
+/*    border: 2px solid orange;*/
+/*}*/
+
+/*#card-3 {*/
+/*    border: 2px solid green;*/
+/*}*/
+
+/*#card-4 {*/
+/*    border: 2px solid blue;*/
+/*}*/
+
+#card-3, #card-5 {
+    /*border: 2px solid hotpink;*/
+    box-shadow: 12px 6px 30px lightgrey;
+}
+
+.profile-img {
+    border: 2px solid #E9F2FB;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.name {
+    font-size: .7rem;
+}
+
+.tag {
+    font-size: .6rem;
+    opacity: 50%;
+}
+
+.highlight {
+    padding: 15px 0 15px 0;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.detail {
+    font-size: .6rem;
+    opacity: 70%;
+    padding-bottom: 5px;
+}
+
+
+@media (min-width: 375px) {
+    #container {
+        /*border: 2px solid grey;*/
+        margin: auto;
+        width: 95%;
+        min-width: 550px;
+        max-width: 1000px;
+        display: flex;
+    }
+
+    .flex-wrapper {
+        flex-direction: row;
+        /*flex-wrap: wrap; --causes boxes overflowing flex container due to too much content*/
+    }
+
+    #left-section {
+        width: 77%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #top-left-section, #bottom-left-section {
+        height: 48%;
+        justify-content: space-evenly;
+    }
+
+    #card-1, #card-4 {
+        width: 63%;
+    }
+
+    #card-2, #card-3 {
+        width: 30%;
+    }
+
+    #card-5 {
+        width: 23%;
+    }
+
+    .card {
+        margin-bottom: 0;
+    }
+}
